@@ -1,0 +1,191 @@
+-- Creating tables for ward
+CREATE TABLE ward (
+     ward_id int NOT NULL,
+     vdcmun_id int NOT NULL,
+     vdcmun_name VARCHAR(64) NOT NULL,
+     district_id int NOT NULL,	
+     district_name VARCHAR(64) NOT NULL,
+     PRIMARY KEY (ward_id)
+);
+COPY ward
+FROM 'C:*\ward_vdcmun_district_name_mapping.csv' 
+DELIMITER ','
+CSV Header;
+
+-- Creating tables for ownership
+CREATE TABLE ownership (
+	building_id	bigint,
+	district_id	int,
+	vdcmun_id	int,
+	ward_id	int,
+	legal_ownership_status	VARCHAR(64),
+	count_families	int,
+	has_secondary_use	int,
+	has_secondary_use_agriculture int,
+	has_secondary_use_hotel	int,
+	has_secondary_use_rental	int,
+	has_secondary_use_institution	int,
+	has_secondary_use_school	int,
+	has_secondary_use_industry	int,
+	has_secondary_use_health_post	int, 
+	has_secondary_use_gov_office	int,
+	has_secondary_use_use_police	int,
+	has_secondary_use_other	int,
+    PRIMARY KEY (building_id)
+);
+COPY ownership
+FROM 'C:*\csv_building_ownership_and_use.csv' 
+DELIMITER ','
+CSV Header;
+
+-- Creating tables for structure
+CREATE TABLE structure (
+	building_id	bigint,
+	district_id	int,
+	vdcmun_id	int,
+	ward_id	int,
+	count_floors_pre_eq	int,
+	count_floors_post_eq	int,
+	age_building	int,
+	plinth_area_sq_ft	int,
+	height_ft_pre_eq	int,
+	height_ft_post_eq	int,
+	land_surface_condition	VARCHAR(64),
+	foundation_type	VARCHAR(64),
+	roof_type	VARCHAR(64),
+	ground_floor_type	VARCHAR(64),
+	other_floor_type	VARCHAR(64),
+	position	VARCHAR(64),
+	plan_configuration	VARCHAR(64),
+	has_superstructure_adobe_mud	int,
+	has_superstructure_mud_mortar_stone	int,
+	has_superstructure_stone_flag	int,
+	has_superstructure_cement_mortar_stone	int,
+	has_superstructure_mud_mortar_brick	int,
+	has_superstructure_cement_mortar_brick	int,
+	has_superstructure_timber	int,
+	has_superstructure_bamboo	int,
+	has_superstructure_rc_non_engineered	int,
+	has_superstructure_rc_engineered	int,
+	has_superstructure_other	int,
+	condition_post_eq	VARCHAR(64),
+	damage_grade	VARCHAR(64),
+	technical_solution_proposed	VARCHAR(64),
+    PRIMARY KEY (building_id)
+);
+
+COPY structure
+FROM 'C:*\csv_building_structure.csv' 
+DELIMITER ','
+CSV Header;
+
+-- Creating tables for damage
+CREATE TABLE damage (building_id bigint,
+     district_id int,    
+     vdcmun_id int,
+     ward_id int,
+     damage_overall_collapse VARCHAR(64),
+     damage_overall_leaning VARCHAR(64),
+    damage_overall_adjacent_building_risk VARCHAR(64),
+    damage_foundation_severe VARCHAR(64),
+    damage_foundation_moderate VARCHAR(64),
+    damage_foundation_insignificant VARCHAR(64),
+    damage_roof_severe VARCHAR(64),
+    damage_roof_moderate VARCHAR(64),
+    damage_roof_insignificant VARCHAR(64),
+    damage_corner_separation_severe VARCHAR(64),
+    damage_corner_separation_moderate VARCHAR(64),
+    damage_corner_separation_insignificant VARCHAR(64),
+    damage_diagonal_cracking_severe VARCHAR(64),
+    damage_diagonal_cracking_moderate VARCHAR(64),
+    damage_diagonal_cracking_insignificant VARCHAR(64),
+    damage_in_plane_failure_severe VARCHAR(64),
+    damage_in_plane_failure_moderate VARCHAR(64),
+    damage_in_plane_failure_insignificant VARCHAR(64),
+    damage_out_of_plane_failure_severe VARCHAR(64),
+    damage_out_of_plane_failure_moderate VARCHAR(64),
+    damage_out_of_plane_failure_insignificant VARCHAR(64),
+    damage_out_of_plane_failure_walls_ncfr_severe VARCHAR(64),
+    damage_out_of_plane_failure_walls_ncfr_moderate VARCHAR(64),
+    damage_out_of_plane_failure_walls_ncfr_insignificant VARCHAR(64),
+    damage_gable_failure_severe VARCHAR(64),
+    damage_gable_failure_moderate VARCHAR(64),
+    damage_gable_failure_insignificant VARCHAR(64),
+    damage_delamination_failure_severe VARCHAR(64),
+    damage_delamination_failure_moderate VARCHAR(64),
+    damage_delamination_failure_insignificant VARCHAR(64),
+    damage_column_failure_severe VARCHAR(64),
+    damage_column_failure_moderate VARCHAR(64),
+    damage_column_failure_insignificant VARCHAR(64),
+    damage_beam_failure_severe VARCHAR(64),
+    damage_beam_failure_moderate VARCHAR(64),
+    damage_beam_failure_insignificant VARCHAR(64),
+    damage_infill_partition_failure_severe VARCHAR(64),
+    damage_infill_partition_failure_moderate VARCHAR(64),
+    damage_infill_partition_failure_insignificant VARCHAR(64),
+    damage_staircase_severe VARCHAR(64),
+    damage_staircase_moderate VARCHAR(64),
+    damage_staircase_insignificant VARCHAR(64),
+    damage_parapet_severe VARCHAR(64),
+    damage_parapet_moderate VARCHAR(64),
+    damage_parapet_insignificant VARCHAR(64),
+    damage_cladding_glazing_severe VARCHAR(64),
+    damage_cladding_glazing_moderate VARCHAR(64),
+    damage_cladding_glazing_insignificant VARCHAR(64),
+    area_assesed VARCHAR(64),
+    damage_grade VARCHAR(64),
+    technical_solution_proposed VARCHAR(64),
+    has_repair_started int,
+    has_damage_foundation int,
+    has_damage_roof int,
+    has_damage_corner_separation int,
+    has_damage_diagonal_cracking int,
+    has_damage_in_plane_failure int,
+    has_damage_out_of_plane_failure int,
+    has_damage_out_of_plane_walls_ncfr_failure int,
+    has_damage_gable_failure int,
+    has_damage_delamination_failure int,
+    has_damage_column_failure int,
+    has_damage_beam_failure int,
+    has_damage_infill_partition_failure int,
+    has_damage_staircase int,
+    has_damage_parapet int,
+    has_damage_cladding_glazing int,
+    has_geotechnical_risk int,
+    has_geotechnical_risk_land_settlement int,
+    has_geotechnical_risk_fault_crack int,
+    has_geotechnical_risk_liquefaction int,
+    has_geotechnical_risk_landslide int,
+    has_geotechnical_risk_rock_fall int,
+    has_geotechnical_risk_flood int,
+    has_geotechnical_risk_other int,
+    PRIMARY KEY (building_id)
+);
+
+COPY damage
+FROM 'C:*\csv_building_damage_assessment.csv' 
+DELIMITER ','
+CSV Header;
+
+-- Merging tables 
+CREATE TABLE damage_own AS  
+SELECT * FROM damage 
+FULL OUTER JOIN ownership
+	USING (building_id,district_id,vdcmun_id,ward_id);
+
+CREATE TABLE damage_own_str AS  
+SELECT * FROM damage_own 
+FULL OUTER JOIN structure
+	USING (building_id,district_id,vdcmun_id,ward_id,damage_grade,technical_solution_proposed);
+
+CREATE TABLE damage_own_str_ward AS  
+SELECT * FROM damage_own_str 
+FULL OUTER JOIN ward
+	USING (district_id,vdcmun_id,ward_id);
+
+-- Exporting final table 
+COPY damage_own_str_ward 
+TO 'C:*\EQ_Damage.csv' 
+DELIMITER ',' 
+CSV HEADER;	
+
