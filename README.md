@@ -31,16 +31,20 @@ Figure 3: Building age distribution
 EDA was also used to visualize the damage distribution as well as the correlation between the damage grade and other variables. Based on the damage grade distribution shown in Figure 4, it was decided to use the oversampling algorithm to create a balanced training dataset. Although the original dataset was not severely unbalanced, oversampling the data was found to have a meaningful impact on the performance of the machine learning models. Figure 5 shows an example plot for the correlation between the damage grade and the building floor type.   
   
 <div align="center">
+
+![image](https://user-images.githubusercontent.com/103223944/188397741-4860dc84-79af-4b94-bd6f-7871c263d923.png)
+
+Figure 4: Damage grade distribution   
   
 ![image](https://user-images.githubusercontent.com/103223944/188396298-890a9fa6-15be-43a8-86ad-b015e14d9f67.png)
 
-Figure 4: Correlation between damage grade and floor type  
+Figure 5: Correlation between damage grade and floor type  
 
 <div align="justify">
 
 ## Machine Learning Models
 Once the dataset was cleaned and ready to be used in the machine learning models, OneHotEncoder was used to convert the non-continuous data to categorial data and then the dataset was split into the train and test datasets. Three different models namely Multinominal Logistic Regression model, Balanced Random Forest Classifier and Neural Network were used to predict the damage grade based on the considered features such as the district, age, height, structural type, and site condition. 
-Figure 5 through Figure 7 and Table 1 summarize the performance of the three models.  Looking at the The first model yielded the mean accuracy of 0.57. The performance of the second model is shown in figure 5 below. The weighted average precision, recall and F1 score are 0.65, 0.50 and 0.55. Although the model has done a poor job predicting damage grades 2 and 3, its performance in predicting the cases with severe damage is deemed acceptable. In general, the neural network model shows better performance based on the f1 score as shown in 
+Figure 6 through Figure 8 and Table 1 summarize the performance of the three models.  Looking at the The first model yielded the mean accuracy of 0.57. The performance of the second model is shown in figure 5 below. The weighted average precision, recall and F1 score are 0.65, 0.50 and 0.55. Although the model has done a poor job predicting damage grades 2 and 3, its performance in predicting the cases with severe damage is deemed acceptable. In general, the neural network model shows better performance based on the f1 score as shown in 
 
 <div align="center">
   
