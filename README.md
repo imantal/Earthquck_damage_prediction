@@ -26,4 +26,7 @@ Data exploration started with screening the variables (columns) that were obviou
 
 Figure 3: Building age distribution 
 
-
+<div align="justify">
+  
+EDA was also used to visualize the damage distribution as well as the correlation between the damage grade and other variables. Based on the damage grade distribution shown in Figure 4, it was decided to use the oversampling algorithm to create a balanced training dataset. Although the original dataset was not severely unbalanced, oversampling the data was found to have a meaningful impact on the performance of the machine learning models. Figure 5 shows an example plot for the correlation between the damage grade and the building floor type.   
+  
