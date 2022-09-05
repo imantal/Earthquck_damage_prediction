@@ -1,9 +1,29 @@
 # Earthquck_damage_prediction
-The project inlcudes a multi-class supervised learning problem to predict the damage classification of buildings as a result of the Gorkha earthquake in Nepal in April 2015. The Gorkha earthquake was 7.8 in magnitude and occured near the Gorkha district of Gandaki Pradesh, Nepal. Almost 9,000 lives were lost, millions of people were instantly made homeless, and $10 billion in damages about half of Nepal's nominal GDP was incurred.
+## Overview of the Project
+<div align="justify">
+The purpose of the project was to use machine learning to predict the damage classification of buildings as a result of the Gorkha earthquake in Nepal in April 2015. The Gorkha earthquake was 7.8 in magnitude and occurred near the Gorkha district of Gandaki Pradesh, Nepal. Almost 9,000 lives were lost, millions of people were instantly made homeless, and $10 billion in damages about half of Nepal's nominal GDP was incurred.
 
-The database used for our project is one of the largest post-disaster datasets ever collected. The dataset icnludes more than 760,000 buildings inspected after the earthqauke. The entry for ecah building contains valuable information on earthquake impacts, household conditions, and socio-economic-demographic statistics. The target variable is damage garde and it has 5 classes, labelled 'Grade 1':'Grade 5' which each represent the different scale of damage sustained to the building.
+<div align="center">
 
-We have clenated the data, and removed the outliers for ecah feature. We have decided which features to keep for prediction. A numbers of methods including Nueral network and random forrest classifier were used to predict the earthqauke damage and compare with actual recorded damge.
+![image](https://user-images.githubusercontent.com/103223944/188395209-6972ab81-017b-4f8a-8456-df3e2f2ab7c0.png)
 
-The Google Slides are saved here:
-https://docs.google.com/presentation/d/1lMVu-DHnxA2VaTplPsBkqHojFtMReIORQGwybrG7sDg/edit#slide=id.g151e308c888_0_17
+Figure1: Buildings destroyed in the 2015 Nepal earthquake (Source: Hilmi Hacaloğlu)
+
+<div align="justify">
+
+The dataset used for the project is one of the largest post-disaster datasets ever collected. The dataset includes more than 760,000 buildings inspected after the earthquake. The entry for each building contains valuable information on earthquake impacts, household conditions, and socio-economic-demographic statistics. The target variable is the damage grade and that has 5 classes, labelled as 'Grade 1' to 'Grade 5', each representing different scale of the damage sustained to the building. Damage grade can be used as a metric to decide about the level of the retrofit needed for each building.
+
+## Data Extract, Transform and Load 
+The first step in data preparation included downloading the raw data in form of CSV files from 2015 Nepal Earthquake: Open Data Portal (npc.gov.np). Then, PostgreSQL was used to import the CSV files into the SQL database, modify them as needed and then combine them into a table that then exported as CSV file for performing exploratory data analysis using Python. 
+## Exploratory Data Analysis
+The original dataset included about 760,000 rows and 120 columns. Each row included information such as the district id, building id, damage grade, building age, building height, building plinth area, building structural component types and geotechnical condition of the site. 
+Jupyter Notebook and Python libraries were used for the exploratory data analysis (EDA) to better understand the dataset. Understanding the relationships between the damage grade and other variables, identifying outliers, binning the data, removing null values, and identifying the relevant features were among the steps taken to understand and prepare the dataset before using it as an input to the machine learning models. 
+Data exploration started with screening the variables (columns) that were obviously uncorrelated to the building damage such as the occupancy classifications. Then, EDA was used to analyze the distribution of the remaining variables to find outliers and bin the data as needed. An example of the variables with extremely unbalanced distribution is shown in Figure 3 where it seems necessary to bin the building age data. This was found to have a meaningful impact on the performance of the machine learning models. 
+
+<div align="center">
+
+![image](https://user-images.githubusercontent.com/103223944/188395949-6aae54b1-ef5f-453d-a30c-d2515589b8f7.png)
+
+Figure 3: Building age distribution 
+
+
