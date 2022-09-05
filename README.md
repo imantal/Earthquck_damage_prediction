@@ -44,7 +44,7 @@ Figure 4: Correlation between damage grade and floor type
 
 ## Machine Learning Models
 Once the dataset was cleaned and ready to be used in the machine learning models, OneHotEncoder was used to convert the non-continuous data to categorial data and then the dataset was split into the train and test datasets. Three different models namely Multinominal Logistic Regression model, Balanced Random Forest Classifier and Neural Network were used to predict the damage grade based on the considered features such as the district, age, height, structural type, and site condition. 
-Figure 5 through Figure 7 and Table 1 summarize the performance of the three models.  Looking at the accuracy and F1 score, the first and last model yielded similar performance. However, it should be noted that the first model was significantly faster the last model. 
+Figure 5 through Figure 7 and Table 1 summarize the performance of the three models.  Looking at the accuracy and F1 score, the first and last model yielded similar performance. However, it should be noted that the first model was significantly faster than the last model. 
 
 <div align="center">
   
