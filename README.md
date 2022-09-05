@@ -3,6 +3,7 @@
 <div align="justify">
 The purpose of the project was to use machine learning to predict the damage classification of buildings as a result of the Gorkha earthquake in Nepal in April 2015. The Gorkha earthquake was 7.8 in magnitude and occurred near the Gorkha district of Gandaki Pradesh, Nepal. Almost 9,000 lives were lost, millions of people were instantly made homeless, and $10 billion in damages about half of Nepal's nominal GDP was incurred.
 
+
 <div align="center">
 
 ![image](https://user-images.githubusercontent.com/103223944/188395209-6972ab81-017b-4f8a-8456-df3e2f2ab7c0.png)
