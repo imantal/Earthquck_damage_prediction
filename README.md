@@ -56,10 +56,10 @@ Figure 6: Balanced Random Forest Classifier model performance
  
 Figure 7: Balanced Random Forest Classifier model performance
 
-![image](https://user-images.githubusercontent.com/103223944/188396763-7a8df545-6483-48c9-bd24-e8edd229eccf.png)
+![image](https://user-images.githubusercontent.com/103223944/188494670-a5796e97-25e1-4021-beb9-acf314c8f0b4.png)
   
 Figure 8: Neural Network model performance
 
 Table 1: Performance of different models (weighted average)
 
-![image](https://user-images.githubusercontent.com/103223944/188400575-ccb162f5-cdd1-474b-97e7-243003b5facc.png)
+![image](https://user-images.githubusercontent.com/103223944/188494733-a58ebe3a-bf96-49ab-9f57-23a32d8b43ce.png)
