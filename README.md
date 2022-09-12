@@ -64,3 +64,7 @@ Figure 7: Neural Network model performance
 Table 1: Performance of different models (weighted average)
 
 ![image](https://user-images.githubusercontent.com/103223944/188494733-a58ebe3a-bf96-49ab-9f57-23a32d8b43ce.png)
+  
+## Project Slides  
+https://docs.google.com/presentation/d/1CavExXFaq3Qau0RkevziEuFiCo5LT0TYV06rrssnQ2I/edit?usp=sharing
+  
