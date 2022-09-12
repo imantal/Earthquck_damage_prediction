@@ -52,7 +52,7 @@ Figure 5 through Figure 7 and Table 1 summarize the performance of the three mod
   
 ![image](https://user-images.githubusercontent.com/103223944/188396709-319554d9-7b7d-4eb9-af5f-54adcf37ee25.png)
  
-Figure 5: Balanced Random Forest Classifier model performance
+Figure 5: Multinominal Logistic Regression model performance
 
 ![image](https://user-images.githubusercontent.com/103223944/188396735-b357ad89-992b-4395-88a6-488ca264f7a8.png)
  
@@ -64,6 +64,6 @@ Figure 7: Neural Network model performance
 
 Table 1: Performance of different models (weighted average)
 
-![image](https://user-images.githubusercontent.com/103223944/188494733-a58ebe3a-bf96-49ab-9f57-23a32d8b43ce.png)
+![image](https://user-images.githubusercontent.com/103223944/189569401-e6319b46-d0cb-4f5a-9a0e-c32f22c2b1f4.png)
   
 
