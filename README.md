@@ -77,5 +77,5 @@ Table 1: Performance of different models (weighted average)
 
 <div align="justify">
    
-# communication protocols
+## Communication Protocol
 All team members communications were made through Microsoft Teams
