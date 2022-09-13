@@ -75,4 +75,5 @@ Table 1: Performance of different models (weighted average)
 
 ![image](https://user-images.githubusercontent.com/103223944/189569401-e6319b46-d0cb-4f5a-9a0e-c32f22c2b1f4.png)
   
-
+# communication protocols
+All team members communications were made through Microsoft Teams
